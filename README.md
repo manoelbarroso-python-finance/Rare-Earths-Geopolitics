@@ -1,4 +1,4 @@
-# Geopolitical Alpha: The 'Friendshoring' Signal in Critical Minerals
+# Geopolitical Signal in Critical Minerals: Testing “Friendshoring” via Alternative Data + NLP
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-LightGBM-orange)
