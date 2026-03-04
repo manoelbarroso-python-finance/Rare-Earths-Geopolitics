@@ -7,7 +7,7 @@
 
 💡 **Interactive Visualization Notice:** GitHub's native viewer does not render interactive JavaScript charts (Plotly). For the full experience including dynamic cumulative returns and the SHAP beeswarm plot please view this notebook via **NBViewer** or run it live on **Google Colab**:
 
-[![Open in nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
+[![Open in nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
 
 ## 📌 Project Overview
