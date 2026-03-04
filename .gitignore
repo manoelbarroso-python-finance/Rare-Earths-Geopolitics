@@ -1,0 +1,9 @@
+# Environments
+venv/
+env/
+.env
+
+# Python/Jupyter cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
