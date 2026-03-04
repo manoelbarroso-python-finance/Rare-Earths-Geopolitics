@@ -5,6 +5,11 @@
 ![NLP](https://img.shields.io/badge/NLP-FinBERT-green)
 ![Alternative Data](https://img.shields.io/badge/Alternative%20Data-GDELT-red)
 
+💡 **Interactive Visualization Notice:** GitHub's native viewer does not render interactive JavaScript charts (Plotly). For the full experience—including dynamic cumulative returns and the SHAP beeswarm plot—please view this notebook via **NBViewer** or run it live on **Google Colab**:
+
+[![Open in nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
+
 ## 📌 Project Overview
 This quantitative research project investigates whether geopolitical sentiment shocks—specifically regarding **US-China tensions and critical minerals supply chain disruptions**—possess directional predictive power over the short-term returns of mining companies. 
 
