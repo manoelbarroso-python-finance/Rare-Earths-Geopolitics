@@ -1,4 +1,4 @@
-# Geopolitical Alpha: The 'Friendshoring' Signal in Critical Minerals
+# Geopolitical Signal in Critical Minerals: Testing “Friendshoring” via Alternative Data + NLP
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-LightGBM-orange)
@@ -11,35 +11,44 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manoelbarroso-python-finance/Rare-Earths-Geopolitics/blob/main/alpha_geopolitics.ipynb)
 
 ## 📌 Project Overview
-This quantitative research project investigates whether geopolitical sentiment shocks specifically regarding **US-China tensions and critical minerals supply chain disruptions** possess directional predictive power over the short-term returns of mining companies. 
+This quantitative research project investigates whether **geopolitical sentiment shocks**—specifically related to **US–China tensions** and **critical minerals supply-chain disruptions** contain **incremental short-horizon signal** for the returns of critical-minerals mining equities.
 
-The core thesis explores the **"Friendshoring"** effect: testing if capital systematically rotates toward alternative, neutral jurisdictions (like Brazil) during periods of high geopolitical stress, utilizing the rare earths and lithium sectors as the primary testing ground.
+The core “friendshoring” angle tests whether companies with **Brazil-related exposure** behave differently from global peers during periods of elevated geopolitical stress, after controlling for broad market, sector, FX, and risk-regime factors.
 
-## 🧠 The Differentiator: Alternative Data & NLP
-Instead of relying on standard financial news APIs (which often suffer from lag and retail bias), this project leverages **institutional-grade alternative data**:
-1. **The GDELT Project:** Querying the global database of events (monitored by global intelligence agencies) to extract real-time geopolitical friction points regarding critical minerals.
-2. **FinBERT (Hugging Face):** Applying a fine-tuned financial NLP model locally to extract a continuous sentiment confidence score from unstructured global headlines.
-3. **Geopolitical Z-Score:** Engineering a rolling standardized shock metric to isolate true systemic stress from everyday news noise.
+## 🧠 The Differentiator: Alternative Data & NLP (Natural Language Processing)
+
+Instead of relying solely on standard financial news feeds, this project builds an **Alternative Data + NLP** pipeline:
+
+1. **GDELT Project:** Querying a global open event/news database to proxy **geopolitical friction intensity** in near real time.
+
+2. **FinBERT (Hugging Face):** Applying a financial language model to score the sentiment of thousands of English headlines.
+
+3. **Geopolitical Shock Z-Score:** Engineering a rolling standardized metric to isolate **meaningful shifts** in geopolitical stress from day-to-day news noise.
 
 ## ⚙️ Methodology & Risk Controls
-This project adheres to strict quantitative development standards to prevent the most common pitfall in financial modeling: **Look-Ahead Bias**.
 
-* **Temporal Alignment:** All macroeconomic controls (SPY, VIX, FX) and NLP signals are strictly lagged ($T-1$) to predict forward daily returns ($T$). Contemporaneous data is explicitly dropped.
-* **Validation:** Utilized `TimeSeriesSplit` (expanding window) rather than K-Fold cross-validation to maintain chronological integrity and simulate a true out-of-sample trading environment.
-* **Algorithm:** Gradient Boosting framework via `LightGBM` for robust handling of non-linear financial tabular data.
+This project follows strict quantitative research practices to reduce common pitfalls in financial modeling.
+
+- **Temporal Alignment (Anti-Leakage):** All controls (SPY, sector/theme ETFs, VIX, FX) and NLP signals are **lagged** and used to predict **forward returns (T+1 / T+2 / T+5)**. Contemporaneous information is excluded.
+- **Validation:** Uses **TimeSeriesSplit** (expanding window) rather than random K-Fold to preserve chronological integrity and simulate a true out-of-sample setting.
+- **Algorithm:** Gradient boosting via **LightGBM**, suitable for non-linear tabular relationships.
 
 ## 📊 Explainable AI (XAI) Insights
-To provide transparency into the "black box" model, **SHAP (Shapley Additive exPlanations)** was implemented. Key findings include:
-* **The Alpha Signal:** The engineered Geopolitical Shock Z-score ranked as the 4th most important predictive feature, outperforming traditional metrics like the VIX and FX rates.
-* **Risk-Off vs. Friendshoring:** SHAP beeswarm analysis reveals that in the immediate short-term ($D+1$), geopolitical shocks predominantly trigger a generalized "risk-off" liquidity flight, temporarily penalizing emerging market assets regardless of their structural "friendshoring" advantages.
 
+To provide transparency into the model, **SHAP (Shapley Additive exPlanations)** is used to interpret feature impact.
+
+Key takeaways:
+- **Signal presence:** The engineered **Geo_Shock_Z** consistently appears among the higher-importance features alongside market/sector proxies.
+- **Short-term dynamics:** In the immediate horizon (D+1), elevated geopolitical stress behaves predominantly as a **risk-off / liquidity-drain** signal, pushing next-day direction downward—suggesting any systematic “rotation” may require more time to materialize.
+
+> Note: predicting **daily direction** is inherently noisy, so results are presented with an emphasis on **robust validation, leakage controls, and interpretability** rather than headline performance claims.
 *(For detailed visual outputs, including the SHAP summary plot and cumulative return benchmarks, refer to the Jupyter Notebook in this repository).*
 
 ## 🚀 How to Run Locally
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/rare-earths-geopolitics.git](https://github.com/your-username/rare-earths-geopolitics.git)
+   git clone [https://github.com/manoelbarroso-python-finance/rare-earths-geopolitics.git](https://github.com/manoelbarroso-python-finance/rare-earths-geopolitics.git)
    cd rare-earths-geopolitics
 
 2. Create and activate a virtual environment
